@@ -356,4 +356,10 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('heroku', [
+    'clean:dist',
+    'build',
+    'connect:dist:keepalive'
+  ]);
 };
