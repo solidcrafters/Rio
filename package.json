@@ -1,7 +1,9 @@
 {
   "name": "rio",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "bower": "~1.0.0"
+  },
   "devDependencies": {
     "chai": "1.4.0",
     "grunt": "~0.4.1",
@@ -38,6 +40,7 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "postinstall": "node_modules/bower/bin/bower install"
   }
 }
