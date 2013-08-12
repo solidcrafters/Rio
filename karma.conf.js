@@ -11,11 +11,9 @@ files = [
   'client/bower_components/angular-mocks/angular-mocks.js',
   'client/scripts/*.js',
   'client/scripts/**/*.js',
-  './node_modules/chai/chai.js',
-  './test/lib/chai-should.js',
-  './test/lib/chai-expect.js',
-  'test/mock/**/*.js',
-  'test/spec/**/*.js'
+  'node_modules/chai/chai.js',
+  'test/client/lib/*.js',
+  'test/client/spec/**/*.js'
 ];
 
 // list of files to exclude
