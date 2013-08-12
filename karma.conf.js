@@ -11,6 +11,9 @@ files = [
   'app/bower_components/angular-mocks/angular-mocks.js',
   'app/scripts/*.js',
   'app/scripts/**/*.js',
+  './node_modules/chai/chai.js',
+  './test/lib/chai-should.js',
+  './test/lib/chai-expect.js',
   'test/mock/**/*.js',
   'test/spec/**/*.js'
 ];
