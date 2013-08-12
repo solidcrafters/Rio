@@ -36,7 +36,6 @@
     "karma-safari-launcher": "latest",
     "karma-firefox-launcher": "latest",
     "karma-ng-scenario": "latest",
-    "connect-livereload": "~0.2.0",
     "matchdep": "~0.1.2",
     "express": "~3.2.6"
   },
