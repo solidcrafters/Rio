@@ -37,7 +37,6 @@
     "karma-firefox-launcher": "latest",
     "karma-ng-scenario": "latest",
     "matchdep": "~0.1.2",
-    "express": "~3.2.6",
     "mocha": "~1.12.0"
   },
   "engines": {
