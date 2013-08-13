@@ -5,14 +5,14 @@ describe('Home Controller Tests', function() {
     var home;
     var config = {
         rootPath :  '../../..',
-        FromRoot : function(path){
+        fromRoot : function(path){
            return this.rootPath + path;
         }
 
     };
 
     beforeEach(function() {
-        var homeController = require(config.FromRoot('/server/controllers/home'));
+        var homeController = require(config.fromRoot('/server/controllers/home'));
         home =  new homeController();
     });
 
