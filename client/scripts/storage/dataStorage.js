@@ -1,6 +1,6 @@
 'use strict';
 
-function LocalDocumentStorage() {
+function LocalDataStorage() {
 
     var prefix = 'rio:';
     var currentIdKey = prefix + 'CurrentDocumentId';
@@ -17,13 +17,14 @@ function LocalDocumentStorage() {
     }
 }
 
-LocalDocumentStorage.prototype.add = function(document) {
+LocalDataStorage.prototype.add = function(document) {
     var documentId = this._getNextId();
     localStorage.setItem(documentId, angular.toJson(document));
     return documentId;
 }
 
-LocalDocumentStorage.prototype.get = function(documentId) {
+LocalDataStorage.prototype.get = function(documentId) {
     var serializedDocument = localStorage.getItem(documentId);
     return angular.fromJson(serializedDocument);
 }
+

@@ -2,7 +2,7 @@
 
 angular.module('RioApp')
     .factory('documentStorage', function() {
-        return new LocalDocumentStorage();
+        return new LocalDataStorage();
     })
     .controller('Document', function ($scope, documentStorage) {
         $scope.create = function(document) {
