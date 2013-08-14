@@ -1,0 +1,21 @@
+<div class="hero-unit" ng-controller="Document">
+    <h1>Add a new Document</h1>
+    <form ng-submit="create(document)">
+        <fieldset>
+            <legend>Document</legend>
+            <div class="form-group">
+                <label for="documentDate">Date</label>
+                <input type="text" class="form-control" id="documentDate" placeholder="Enter document date" ng-model="document.date">
+            </div>
+            <div class="form-group">
+                <label for="documentAmount">Amount</label>
+                <input type="text" class="form-control" id="documentAmount" placeholder="Enter amount" ng-model="document.amount">
+            </div>
+            <div class="form-group">
+                <label for="documentNote">note</label>
+                <textarea class="form-control" id="documentNote" placeholder="Enter note" ng-model="document.note"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Save</button>
+        </fieldset>
+    </form>
+</div>
