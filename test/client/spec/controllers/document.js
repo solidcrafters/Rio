@@ -7,6 +7,8 @@ describe('Document Controller', function() {
     describe('Document Creation', function() {
 
         var storageSpy;
+        var scope;
+        var documentController;
 
         beforeEach(module('RioApp', function($provide) {
             var documentStorage = {
@@ -18,19 +20,28 @@ describe('Document Controller', function() {
             $provide.value('documentStorage', documentStorage);
         }));
 
-        it('should create a new document', inject(function($controller, $rootScope) {
-            var scope = $rootScope.$new();
-            var documentController = $controller('Document', {
+        beforeEach(inject(function($controller, $rootScope) {
+            scope = $rootScope.$new();
+            documentController = $controller('Document', {
                 $scope: scope
             });
-
-            var document = {
-                date: new Date('23/06/2013'),
-                amount: 234.15,
-                note: 'Achat d\'un dongle USB pour Mac'
-            };
-            scope.create(document);
-            storageSpy.should.have.been.called;
         }));
+
+        it('should create a new document', function() {
+
+            var date = '06/23/2013';
+            var amount = 234.15;
+            var note = 'Achat d\'un dongle USB pour Mac';
+            var documentSpecification = {
+                date: date,
+                amount: amount,
+                note: note
+            };
+
+            scope.create(documentSpecification);
+
+            var document = new Document(new Date(date), amount, note);
+            storageSpy.should.have.been.calledWith(document);
+        });
     });
 });
