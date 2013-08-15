@@ -2,8 +2,7 @@
 
 function LocalDataStorage() {
 
-    var prefix = 'rio:';
-    var currentIdKey = prefix + 'CurrentDocumentId';
+    var currentIdKey = 'CurrentId';
 
     if (!localStorage.getItem(currentIdKey)) {
         localStorage.setItem(currentIdKey, 0);
