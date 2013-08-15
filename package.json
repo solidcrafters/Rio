@@ -31,13 +31,11 @@
   "devDependencies": {
     "chai": "1.4.0",
     "karma": "latest",
-    "karma-mocha": "latest",
     "karma-chrome-launcher": "latest",
     "karma-safari-launcher": "latest",
     "karma-firefox-launcher": "latest",
     "karma-ng-scenario": "latest",
     "matchdep": "~0.1.2",
-    "mocha": "~1.12.0",
     "sinon-chai": "~2.4.0"
   },
   "engines": {
