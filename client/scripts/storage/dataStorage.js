@@ -16,14 +16,14 @@ function LocalDataStorage() {
     }
 }
 
-LocalDataStorage.prototype.add = function(document) {
-    var documentId = this._getNextId();
-    localStorage.setItem(documentId, angular.toJson(document));
-    return documentId;
+LocalDataStorage.prototype.add = function(data) {
+    var dataId = this._getNextId();
+    localStorage.setItem(dataId, angular.toJson(data));
+    return dataId;
 }
 
-LocalDataStorage.prototype.get = function(documentId) {
-    var serializedDocument = localStorage.getItem(documentId);
-    return angular.fromJson(serializedDocument);
+LocalDataStorage.prototype.get = function(dataId) {
+    var serializedData = localStorage.getItem(dataId);
+    return angular.fromJson(serializedData);
 }
 
