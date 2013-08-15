@@ -29,7 +29,7 @@ describe('Document Controller', function() {
 
         it('should create a new document', function() {
 
-            var date = '06/23/2013';
+            var date = new Date('06/23/2013');
             var amount = 234.15;
             var note = 'Achat d\'un dongle USB pour Mac';
             var documentSpecification = {
@@ -40,7 +40,7 @@ describe('Document Controller', function() {
 
             scope.create(documentSpecification);
 
-            var document = new Document(new Date(date), amount, note);
+            var document = new Document(date, amount, note);
             storageSpy.should.have.been.calledWith(document);
         });
     });

@@ -5,9 +5,14 @@ angular.module('RioApp')
         return new LocalDataStorage();
     })
     .controller('Document', function ($scope, documentStorage) {
+
+        $scope.document = {
+            date: new Date()
+        };
+
         $scope.create = function(documentSpecification) {
             var document = new Document(
-                new Date(documentSpecification.date),
+                documentSpecification.date,
                 documentSpecification.amount,
                 documentSpecification.note);
 
