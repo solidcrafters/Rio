@@ -317,14 +317,6 @@ module.exports = function (grunt) {
     }
   });
 
-    grunt.registerTask('nodetest', 'run mocha node tests', function () {
-        var done = this.async();
-        require('child_process').exec('./node_modules/mocha/bin/mocha ./test/server/* -R spec', function (err, stdout) {
-            grunt.log.write(stdout);
-            done(err);
-        });
-    });
-
   grunt.registerTask('server', function (target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
@@ -343,8 +335,7 @@ module.exports = function (grunt) {
     'clean:server',
     'concurrent:test',
     'connect:test',
-    'karma',
-    'nodetest'
+    'karma'
   ]);
 
   grunt.registerTask('build', [
