@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('RioApp', [])
+angular.module('RioApp', ['ui.date'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
