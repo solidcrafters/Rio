@@ -7,6 +7,10 @@ angular.module('RioApp', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+        .when('/document/new', {
+            templateUrl: 'views/document.html',
+            controller: 'Document'
+        })
       .otherwise({
         redirectTo: '/'
       });

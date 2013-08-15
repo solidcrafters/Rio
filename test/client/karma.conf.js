@@ -1,18 +1,20 @@
 // Karma configuration
-module.exports = function(config) {
+module.exports = function (config) {
     config.set({
         // base path, that will be used to resolve files and exclude
         basePath: '../..',
 
         // list of files / patterns to load in the browser
         files: [
-          'client/bower_components/angular/angular.js',
-          'client/bower_components/angular-mocks/angular-mocks.js',
-          'client/scripts/*.js',
-          'client/scripts/**/*.js',
-          'node_modules/chai/chai.js',
-          'test/client/lib/*.js',
-          'test/client/spec/**/*.js'
+            'client/bower_components/angular/angular.js',
+            'client/bower_components/angular-mocks/angular-mocks.js',
+            'client/scripts/*.js',
+            'client/scripts/**/*.js',
+            'node_modules/chai/chai.js',
+            'node_modules/sinon-chai/lib/sinon-chai.js',
+            'node_modules/sinon/pkg/sinon.js',
+            'test/client/lib/chai-should.js',
+            'test/client/spec/**/*.js'
         ],
 
         frameworks: ["jasmine"],
