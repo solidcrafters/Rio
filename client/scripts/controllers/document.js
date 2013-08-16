@@ -10,6 +10,9 @@ angular.module('RioApp')
             date: new Date()
         };
 
+        $.datepicker.setDefaults(
+            $.datepicker.regional['fr']);
+
         $scope.create = function(documentSpecification) {
             var document = new Document(
                 documentSpecification.date,
@@ -19,4 +22,3 @@ angular.module('RioApp')
             documentStorage.add(document);
         }
     });
-
